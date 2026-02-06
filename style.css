@@ -372,6 +372,7 @@ nav h3 {
     display: none;
     background-size: cover;
     background-position: center;
+    pointer-events: none;
 }
 
 #page4 {
