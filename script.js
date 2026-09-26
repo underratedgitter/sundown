@@ -24,7 +24,7 @@ function page4Animation() {
 }
 
 function swiperAnimation() {
-    var swiper = new Swiper(".mySwiper", {
+    new Swiper(".mySwiper", {
         slidesPerView: "auto",
         centeredSlides: true,
         spaceBetween: 100,
@@ -37,7 +37,7 @@ function menuAnimation() {
     var navimg = document.querySelector("nav img")
     var flag = 0
     menu.addEventListener("click", function () {
-        if (flag == 0) {
+        if (flag === 0) {
             full.style.top = 0
             navimg.style.opacity = 0
             flag = 1
