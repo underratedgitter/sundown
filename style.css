@@ -98,8 +98,13 @@ nav {
     color: #fff;
 }
 
-nav h3 {
+#menu-toggle {
     display: none;
+    appearance: none;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    cursor: pointer;
 }
 
 #center {
@@ -199,7 +204,7 @@ nav h3 {
     }
 }
 
-#page2 {
+#studio {
     min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
@@ -284,7 +289,7 @@ nav h3 {
     font-size: 1vw;
 }
 
-#page2 #gooey {
+#studio #gooey {
     height: 32vw;
     width: 32vw;
     position: absolute;
@@ -319,7 +324,7 @@ nav h3 {
 
 
 
-#page3 {
+#work {
     min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
@@ -393,11 +398,17 @@ nav h3 {
     padding: 0 2vw;
 }
 
-#page5 {
+#contact {
     height: 100vh;
     width: 100%;
+    padding: 6vw 2vw;
+    position: relative;
+    z-index: 1;
+    color: #fff;
     /* background-color: #EFEAE3; */
 }
+
+#contact a { color: inherit; }
 
 #footer {
     position: fixed;
@@ -437,7 +448,14 @@ nav h3 {
     position: fixed;
     z-index: 99;
     top: -100%;
-    transition: all ease 0.5s;
+    visibility: hidden;
+    transition: top ease 0.5s, visibility 0s linear 0.5s;
+}
+
+#full-scr.is-open {
+    top: 0;
+    visibility: visible;
+    transition: top ease 0.5s, visibility 0s;
 }
 
 #full-div1 {
@@ -446,7 +464,41 @@ nav h3 {
     background-color: #EFEAE3;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10vh 6vw 4vh;
+}
 
+#mobile-nav {
+    display: block;
+    padding: 0;
+    width: 100%;
+}
+
+.mobile-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.mobile-menu a {
+    color: #111;
+    text-decoration: none;
+    font-size: 9vw;
+    font-weight: 200;
+    line-height: 1.2;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a:focus-visible {
+    color: #FE320A;
+}
+
+#studio:focus,
+#work:focus,
+#contact:focus {
+    outline: none;
 }
 
 @media (max-width:600px) {
@@ -472,7 +524,7 @@ nav h3 {
         display: none;
     }
 
-    nav h3 {
+    #menu-toggle {
         display: block;
         padding: 3vw 5vw;
         border: 1px solid #ababab;
@@ -520,7 +572,7 @@ nav h3 {
         margin-left: 4%;
     }
 
-    #page2 {
+    #studio {
         min-height: 100vh;
         width: 100%;
         background-color: #EFEAE3;
@@ -596,7 +648,7 @@ nav h3 {
         font-size: 3vw;
     }
 
-    #page2 #gooey {
+    #studio #gooey {
         height: 62vw;
         width: 62vw;
         position: absolute;

@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sundown Studio</title>
     <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+        integrity="sha384-myMD3E5opI6FHESO8TPlclGYDK/6k9f/8hVfh2U/ycpx493lL3yEuBgD9pGauKS+" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css"
+        integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51"
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,15 +26,15 @@
     <div id="main">
 
         <div id="page1">
-            <nav>
+            <nav aria-label="Main">
                 <img src="https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15c2_Sundown%20logo.svg"
                     alt="">
                 <div id="nav-part2">
-                    <h4><a href="#">Work</a></h4>
-                    <h4><a href="#">Studio</a></h4>
-                    <h4><a href="#">Contact</a></h4>
+                    <h4><a href="#work">Work</a></h4>
+                    <h4><a href="#studio">Studio</a></h4>
+                    <h4><a href="#contact">Contact</a></h4>
                 </div>
-                <h3>Menu</h3>
+                <button type="button" id="menu-toggle" aria-expanded="false" aria-controls="full-scr">Menu</button>
             </nav>
             <div id="center">
                 <div id="left">
@@ -50,9 +53,9 @@
                 <div id="hero-2"></div>
                 <div id="hero-3"></div>
             </div>
-            <video autoplay loop muted src="./video.mp4"></video>
+            <video autoplay loop muted playsinline src="./video.mp4"></video>
         </div>
-        <div id="page2">
+        <div id="studio" tabindex="-1">
             <div id="moving-text">
                 <div class="con">
                     <h1>EXPERIENCES</h1>
@@ -94,7 +97,7 @@
 
             </div>
         </div>
-        <div id="page3">
+        <div id="work" tabindex="-1">
             <div id="elem-container">
                 <div id="elem1" class="elem"
                     data-image="https://images.unsplash.com/photo-1701001308648-7b731a52b8d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D">
@@ -147,12 +150,21 @@
 
             </div>
         </div>
-        <div id="page5">
-
+        <div id="contact" tabindex="-1">
+            <h2>Contact</h2>
+            <p>For studio enquiries, visit the original
+                <a href="https://www.sundownstudio.com/" target="_blank" rel="noopener noreferrer">Sundown Studio website</a>.
+            </p>
         </div>
-        <div id="full-scr">
+        <div id="full-scr" aria-hidden="true" inert>
             <div id="full-div1">
-                
+                <nav id="mobile-nav" aria-label="Mobile">
+                    <ul class="mobile-menu">
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#studio">Studio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
@@ -165,8 +177,12 @@
 
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"
+        integrity="sha384-voACyheA+DAB48csVXOUbqDmv+R5OoXFLc4lXzei9pcDasNVUoNdN1tf+Z6G+qGF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"
+        integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 
