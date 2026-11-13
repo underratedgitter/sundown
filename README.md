@@ -11,8 +11,7 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Locomotive Scroll](https://img.shields.io/badge/Locomotive%20Scroll-3.5.4-black?style=for-the-badge)
-![Swiper.js](https://img.shields.io/badge/Swiper.js-v11-6332F6?style=for-the-badge&logo=swiper&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+![Swiper.js](https://img.shields.io/badge/Swiper.js-v11.2.10-6332F6?style=for-the-badge&logo=swiper&logoColor=white)
 
 <br/>
 
@@ -35,13 +34,14 @@ This project demonstrates advanced CSS animation, scroll-driven effects, and int
 | Feature | Implementation |
 |:---|:---|
 | 🎬 **Animated Splash Loader** | Sequential word reveal on page load |
-| 🎞️ **Background Video Hero** | Autoplay looping video with overlay layout |
+| 🎞️ **Background Video Hero** | Autoplay looping background video |
 | 🔄 **Infinite Marquee Text** | CSS animation scroll ticker (EXPERIENCES · CONTENT · ENVIRONMENTS) |
-| 🖱️ **Hover Image Preview** | Mouse-following fixed image that swaps on element hover |
+| 🖱️ **Hover Image Preview** | Fixed image preview that swaps on element hover |
 | 🎠 **Swiper.js Carousel** | Page 4 sliding gallery with smooth transitions |
 | 📜 **Locomotive Smooth Scroll** | Inertia-based page scrolling for premium feel |
 | 🎨 **Custom Typography** | Neue Haas Display font (Light, Roman, Medium) |
-| 📱 **Responsive Layout** | Fluid grid and responsive nav |
+| 📱 **Responsive Layout** | Fluid layout and responsive nav |
+| 🧭 **Mobile Menu** | Full-screen overlay nav with keyboard focus handling |
 
 ---
 
@@ -51,9 +51,9 @@ This project demonstrates advanced CSS animation, scroll-driven effects, and int
 |:---|:---|:---|
 | HTML5 | — | Semantic page structure |
 | CSS3 | — | Animations, layout, custom typography |
-| JavaScript (Vanilla) | ES6+ | Scroll events, hover interactions, loader |
+| JavaScript (Vanilla) | ES6+ | Scroll events, hover interactions, loader, menu |
 | [Locomotive Scroll](https://locomotivemtl.github.io/locomotive-scroll/) | 3.5.4 | Smooth inertia scrolling |
-| [Swiper.js](https://swiperjs.com/) | 11 | Touch-friendly slider/carousel |
+| [Swiper.js](https://swiperjs.com/) | 11.2.10 | Touch-friendly slider/carousel |
 
 ---
 
@@ -63,7 +63,9 @@ This project demonstrates advanced CSS animation, scroll-driven effects, and int
 sundown/
 ├── index.html                  # Main entry point
 ├── style.css                   # All styles + animations
-├── script.js                   # Locomotive Scroll init + hover interactions
+├── script.js                   # Locomotive Scroll + Swiper init, hover/fixed-image, nav, loader
+├── tests/
+│   └── navigation.test.cjs    # Navigation behaviour tests
 ├── icon.png                    # Favicon
 ├── video.mp4                   # Hero background video
 ├── NeueHaasDisplayLight.ttf    # Custom font — Light
@@ -91,6 +93,12 @@ open index.html
 > npx serve .
 > # then open http://localhost:3000
 > ```
+> (`npx serve` requires [Node.js](https://nodejs.org/).)
+
+> **Note:** The navigation tests run on the built-in Node.js test runner — no dependencies needed:
+> ```bash
+> node --test tests/navigation.test.cjs
+> ```
 
 ---
 
@@ -103,10 +111,5 @@ open index.html
 | **Page 2 — Marquee** | Infinite horizontal ticker + studio philosophy text |
 | **Page 3 — Work** | Hover-preview portfolio grid (7 projects) |
 | **Page 4 — Carousel** | Swiper.js sliding gallery |
+| **Contact** | Studio enquiry link to the original Sundown Studio website |
 | **Footer** | Minimal Sundown wordmark footer |
-
----
-
-## 📜 License
-
-MIT © [Suraj Patel](https://github.com/underratedgitter)
